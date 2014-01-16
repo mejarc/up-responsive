@@ -13,12 +13,14 @@ a {
 
 h1 {
   font-size: 1.5em;
+  font-size: 4vw;
   line-height: 1.65em;
   letter-spacing: .25rem;
 }
 
 h2 {
   font-size: 1.125em;
+  font-size: 3vw;
   line-height: 1.65em;
 }
 
