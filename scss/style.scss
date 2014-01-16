@@ -3,7 +3,6 @@
  body {
   font-family: $mainFont, sans-serif;
   font-size: $baseFontSize;
-  font-size: ;
   line-height: 1.75em;
 }
 a {
@@ -14,13 +13,12 @@ a {
 
 h1 {
   font-size: $header1FontSize;
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 1.65em;
   letter-spacing: .25rem;
 }
 h2 {
   font-size: $header2FontSize;
-  font-size: 3vw;
   line-height: 1.65em;
 }
 img { max-width: 100%; }
