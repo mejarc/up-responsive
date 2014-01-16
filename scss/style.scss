@@ -1,0 +1,129 @@
+@import 'variables';
+
+ body {
+  font-family: $mainFont, sans-serif;
+  font-size: $baseFontSize;
+  line-height: 1.75em;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: $linkTransitionTime;
+  transition: $linkTransitionTime;
+}
+
+h1 {
+  font-size: $header1FontSize;
+  line-height: 1.65em;
+  letter-spacing: .25rem;
+}
+h2 {
+  font-size: $header2FontSize;
+  line-height: 1.65em;
+}
+img { max-width: 100%; }
+li {
+  list-style: none;
+}
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.display {
+  font-family: $displayFont, sans-serif;
+  text-transform: capitalize;
+}
+.time {
+  font-style: italic;
+  padding-right: .25rem;
+}
+#copyright {
+  padding: 1em 0;
+  margin: 1em 0;
+  text-align: center;
+}
+/* Theme */
+/* Noon.
+background: #{$noonBackground}, or #{$noonGradient}
+text color: #{$noonPrimaryText}
+secondary text color: #{$noonSecondaryText}
+header color: #{$noonHeader}
+link color: #{$noonLink}
+hover link color: #{$noonLinkHover}
+text shadow color: #{$noonTextShadow}
+*/
+ .noon {
+  color: $noonPrimaryText;
+  background: $noonBackground;
+  /* solid-color fallback */
+  background: $noonGradient fixed;
+}
+/* Default link color for "Noon" theme
+
+  <div class="noon">
+    <a>Default link</a>
+  </div>
+  
+*/
+ .noon a {
+  color: $noonLink;
+}
+.noon h1 {
+  color: $noonHeader;
+  text-shadow: 0 2px 2px $noonTextShadow;
+}
+.noon h2, .noon .time, .noon nav a:visited {
+  color: $noonSecondaryText;
+}
+.noon a:hover, .noon nav a:hover {
+  color: $noonLinkHover;
+}
+
+/* Default is portrait, phone */
+/* Landscape on smallest devices */
+@media screen and (min-width: $default) and (max-width: $landscape-phone){
+   .grid_6 {
+    width: 100%;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: $tablet) {
+  .grid_6 {
+    width: 100%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: $medium-screen) {
+  nav { 
+    float: right;
+    min-width: 100%;
+  }
+    nav li {
+    float: left;
+    margin-right: 3.3%;
+  }
+
+  nav li:after {
+    content:', ';
+  }
+  nav li:last-of-type:after {
+    content:'';
+  }
+  nav li:last-of-type:before {
+    content:'and ';
+    display: inline-block;
+    padding-right: 0.25em;
+  }
+  nav ul {
+    margin-top: 5.65em;
+  }
+    .grid_6 {
+  width: 49%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: $large-screen) { 
+}
