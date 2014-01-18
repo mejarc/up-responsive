@@ -1,4 +1,42 @@
 /* Adaptive styles */
+/*
+Defaults for all:
+base Font Size: 16px;
+header1 FontSize: 1.5em;
+header2 FontSize: 1.125em;
+
+link Transition Time: 0.5s;
+
+Themes:
+Noon:
+noon Background: rgba(70, 113, 213, 0.8);
+noon Gradient: linear-gradient(to bottom, rgba(70, 113, 213, 0.8) 75%, rgba(191, 113, 48, 0.8));
+noon Primary Text: #06266f;
+noon Secondary Text: #2a4480;
+noon Header: #ff9640;
+noon Link: #ff9640;
+noon Link Hover: #ffd300;
+noon Text Shadow: #2a4480;
+
+main Font: Roboto;
+display Font: 'Alegreya Sans SC';
+
+Breakpoints:
+default:                320px;
+tablet:                 768px;
+medium screen:          992px;
+large screen:          1200px;
+landscape phone:        767px;
+
+
+<div class="noon">
+  <ul>
+    <li>Text.</li>
+    <li><a href=",">Link</a></li>
+  </ul>
+</div>
+
+*/
 body {
   font-family: Roboto, sans-serif;
   font-size: 16px;
