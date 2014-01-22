@@ -1,4 +1,4 @@
-@import '_variables';
+@import 'variables';
 
  body {
   font-family: $mainFont, sans-serif;
@@ -13,7 +13,6 @@ a {
 
 h1 {
   font-size: $header1FontSize;
-  font-size: 3vw;
   line-height: 1.65em;
   letter-spacing: .25rem;
 }
