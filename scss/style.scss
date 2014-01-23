@@ -1,5 +1,24 @@
-@import 'variables';
+@import '_variables';
+@import '_mixins';
+/*
+Defaults for all:
+Base Font Size: #{$baseFontSize};
+Header1 Font Size: #{$header1FontSize}
+Header2 Font Size: #{$header2FontSize};
 
+Link Transition Time: #{$linkTransitionTime};
+
+Main font: #{$mainFont}
+Display font: #{$displayFont}
+
+Breakpoints:
+default:                #{$default}
+tablet:                 #{$tablet}
+medium screen:          #{$medium-screen}
+large screen:           #{$large-screen}
+landscape phone:        #{$landscape-phone}
+
+*/
  body {
   font-family: $mainFont, sans-serif;
   font-size: $baseFontSize;
@@ -23,6 +42,18 @@ h2 {
 img { max-width: 100%; }
 li {
   list-style: none;
+}
+nav {
+@media screen and (min-width: $medium-screen) {
+    float: right;
+    min-width: 100%;
+  }
+}
+nav li {
+@media screen and (min-width: $medium-screen) {
+    float: left;
+    margin-right: 3.3%;
+  }
 }
 nav ul {
   margin: 0;
@@ -53,7 +84,7 @@ link color: #{$noonLink}
 hover link color: #{$noonLinkHover}
 text shadow color: #{$noonTextShadow}
 */
- .noon {
+.noon {
   color: $noonPrimaryText;
   background: $noonBackground;
   /* solid-color fallback */
@@ -79,6 +110,14 @@ text shadow color: #{$noonTextShadow}
 .noon a:hover, .noon nav a:hover {
   color: $noonLinkHover;
 }
+/* Sunrise */
+@include time_of_day(sunrise);
+
+/* Sunset */
+@include time_of_day(sunset);
+
+/* Midnight */
+@include time_of_day(midnight);
 
 /* Default is portrait, phone */
 /* Landscape on smallest devices */
@@ -96,14 +135,6 @@ text shadow color: #{$noonTextShadow}
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: $medium-screen) {
-  nav { 
-    float: right;
-    min-width: 100%;
-  }
-    nav li {
-    float: left;
-    margin-right: 3.3%;
-  }
 
   nav li:after {
     content:', ';
@@ -122,8 +153,4 @@ text shadow color: #{$noonTextShadow}
     .grid_6 {
   width: 49%;
   }
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media screen and (min-width: $large-screen) { 
 }

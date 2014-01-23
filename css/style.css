@@ -1,60 +1,78 @@
-/* Adaptive styles */
+/*
+Defaults for all:
+Base Font Size: 16px;
+Header1 Font Size: 1.5em
+Header2 Font Size: 1.125em;
+
+Link Transition Time: 0.5s;
+
+Main font: Roboto
+Display font: Alegreya Sans SC
+
+Breakpoints:
+default:                320px
+tablet:                 768px
+medium screen:          992px
+large screen:           1200px
+landscape phone:        767px
+
+*/
 body {
   font-family: Roboto, sans-serif;
   font-size: 16px;
-  line-height: 1.75em;
-}
+  line-height: 1.75em; }
 
 a {
   text-decoration: none;
   -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
+  transition: 0.5s; }
 
 h1 {
   font-size: 1.5em;
   line-height: 1.65em;
-  letter-spacing: .25rem;
-}
+  letter-spacing: .25rem; }
 
 h2 {
   font-size: 1.125em;
-  line-height: 1.65em;
-}
+  line-height: 1.65em; }
 
 img {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 li {
-  list-style: none;
-}
+  list-style: none; }
+
+@media screen and (min-width: 992px) {
+  nav {
+    float: right;
+    min-width: 100%; } }
+
+@media screen and (min-width: 992px) {
+  nav li {
+    float: left;
+    margin-right: 3.3%; } }
 
 nav ul {
   margin: 0;
   list-style: none;
-  padding: 0;
-}
+  padding: 0; }
 
 .display {
   font-family: "Alegreya Sans SC", sans-serif;
-  text-transform: capitalize;
-}
+  text-transform: capitalize; }
 
 .time {
   font-style: italic;
-  padding-right: .25rem;
-}
+  padding-right: .25rem; }
 
 #copyright {
   padding: 1em 0;
   margin: 1em 0;
-  text-align: center;
-}
+  text-align: center; }
 
 /* Theme */
 /* Noon.
-background: rgba(70, 113, 213, 0.8), or linear-gradient(to bottom, rgba(70, 113, 213, 0.8) 75%, rgba(191, 113, 48, 0.8))
+background: rgba(70, 113, 213, 0.8), or rgba(70, 113, 213, 0.8)
 text color: #06266f
 secondary text color: #2a4480
 header color: #ff9640
@@ -66,8 +84,7 @@ text shadow color: #2a4480
   color: #06266f;
   background: rgba(70, 113, 213, 0.8);
   /* solid-color fallback */
-  background: linear-gradient(to bottom, rgba(70, 113, 213, 0.8) 75%, rgba(191, 113, 48, 0.8)) fixed;
-}
+  background: rgba(70, 113, 213, 0.8) fixed; }
 
 /* Default link color for "Noon" theme
 
@@ -77,67 +94,54 @@ text shadow color: #2a4480
   
 */
 .noon a {
-  color: #ff9640;
-}
+  color: #ff9640; }
 
 .noon h1 {
   color: #ff9640;
-  text-shadow: 0 2px 2px #2a4480;
-}
+  text-shadow: 0 2px 2px #2a4480; }
 
 .noon h2, .noon .time, .noon nav a:visited {
-  color: #2a4480;
-}
+  color: #2a4480; }
 
 .noon a:hover, .noon nav a:hover {
-  color: #ffd300;
-}
+  color: #ffd300; }
+
+/* Sunrise */
+body {
+  background-opacity: 0.8; }
+
+/* Sunset */
+body {
+  background-opacity: 0.8; }
+
+/* Midnight */
+body {
+  background-opacity: 0.8; }
 
 /* Default is portrait, phone */
 /* Landscape on smallest devices */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .grid_6 {
-    width: 100%;
-  }
-}
+    width: 100%; } }
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
   .grid_6 {
-    width: 100%;
-  }
-}
+    width: 100%; } }
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-  nav {
-    float: right;
-    min-width: 100%;
-  }
-
-  nav li {
-    float: left;
-    margin-right: 3.3%;
-  }
-
   nav li:after {
-    content: ', ';
-  }
+    content: ', '; }
 
   nav li:last-of-type:after {
-    content: '';
-  }
+    content: ''; }
 
   nav li:last-of-type:before {
     content: 'and ';
     display: inline-block;
-    padding-right: 0.25em;
-  }
+    padding-right: 0.25em; }
 
   nav ul {
-    margin-top: 5.65em;
-  }
+    margin-top: 5.65em; }
 
   .grid_6 {
-    width: 49%;
-  }
-}
-/* Large devices (large desktops, 1200px and up) */
+    width: 49%; } }
