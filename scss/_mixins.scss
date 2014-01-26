@@ -1,8 +1,8 @@
 @import '_variables';
 
-@mixin time_of_day($time...){
+@mixin time_of_day($time: noon){
   @if $time == sunrise {
-    .#{time}{
+    .#{$time}{
       background-opacity: 0.5;
     }
     $i: 6;
@@ -23,13 +23,16 @@
     }
   }
   @else if $time == midnight {
-    .midnight {
+    .#{$time} {
       background-opacity: 0.2;
     }
   }
   @else {
-    body {
-      background-opacity: 0.8;
+    .#{$time}{
+      background: $noonBackground;
+      /* solid-color fallback */
+      background: $noonGradient fixed;
+      color: $noonPrimaryText;
     }
   }
 }

@@ -81,10 +81,10 @@ hover link color: #ffd300
 text shadow color: #2a4480
 */
 .noon {
-  color: #06266f;
   background: rgba(70, 113, 213, 0.8);
   /* solid-color fallback */
-  background: rgba(70, 113, 213, 0.8) fixed; }
+  background: rgba(70, 113, 213, 0.8) fixed;
+  color: #06266f; }
 
 /* Default link color for "Noon" theme
 
@@ -107,16 +107,49 @@ text shadow color: #2a4480
   color: #ffd300; }
 
 /* Sunrise */
-body {
-  background-opacity: 0.8; }
+.sunrise {
+  background-opacity: 0.5; }
+
+#morning ul li:nth-child(6) {
+  opacity: 1.2; }
+
+#morning ul li:nth-child(5) {
+  opacity: 1; }
+
+#morning ul li:nth-child(4) {
+  opacity: 0.8; }
+
+#morning ul li:nth-child(3) {
+  opacity: 0.6; }
+
+#morning ul li:nth-child(2) {
+  opacity: 0.4; }
+
+#morning ul li:nth-child(1) {
+  opacity: 0.2; }
 
 /* Sunset */
-body {
-  background-opacity: 0.8; }
+#night ul li:nth-child(0) {
+  opacity: 1; }
+
+#night ul li:nth-child(1) {
+  opacity: 0.8; }
+
+#night ul li:nth-child(2) {
+  opacity: 0.6; }
+
+#night ul li:nth-child(3) {
+  opacity: 0.4; }
+
+#night ul li:nth-child(4) {
+  opacity: 0.2; }
+
+#night ul li:nth-child(5) {
+  opacity: 0; }
 
 /* Midnight */
-body {
-  background-opacity: 0.8; }
+.midnight {
+  background-opacity: 0.2; }
 
 /* Default is portrait, phone */
 /* Landscape on smallest devices */

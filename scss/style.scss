@@ -84,12 +84,7 @@ link color: #{$noonLink}
 hover link color: #{$noonLinkHover}
 text shadow color: #{$noonTextShadow}
 */
-.noon {
-  color: $noonPrimaryText;
-  background: $noonBackground;
-  /* solid-color fallback */
-  background: $noonGradient fixed;
-}
+@include time_of_day;
 /* Default link color for "Noon" theme
 
   <div class="noon">
